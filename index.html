@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+
+</head>
+<body>
+  <nav>
+    <div class="list"> 
+      <img src="images/icon-menu.svg" alt="" class="menu" onclick="moveDiv()">
+      <img src="./images/logo.svg" alt="" >
+      <ul>   
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul></div>
+    <div class="cart">
+      <div class="cart-info" id="cart-info">
+        <div class="iconcart">
+      <img src="./images/icon-cart.svg" alt="" class="cart-img" onclick="showCart()">
+    <!--    <span class=total>3</span>-->
+    </div>
+      <div class="cart-container" id="cart">
+        <h3 class="h3">Cart</h3>
+        <hr>
+        <div class="iteems-container">
+        <div class="iteems">
+       <p id="p">Your cart is empty</p>
+          <!-- <img src="images/image-product-1.jpg" alt="" class="mainImagecart">
+          <div class="info">
+          <h3>Fall Limited Edition Sneakers</h3>
+         <div class="priceCart">
+          <span>$125.00</span> 
+          <span>x</span>
+          <span>3</span>
+          <span class="somme">$375.00</span></div>
+         </div>
+         <img src="images/icon-delete.svg" alt="" class="delete">  -->
+
+      </div>
+   
+    </div>     <button id="btnn">Checkout</button> 
+ </div>
+ </div>
+      <img src="images/image-avatar.png" alt="" class="avatar">
+   
+    </div>
+    
+  </nav>
+<section class="container">
+  <div class="product-images">
+    <img src="images/icon-next.svg" alt="" class="next left" onclick="prevPhoneIemage() ">
+    <img src="images/image-product-1.jpg" alt="product image" class="img " id="main-img" onclick="showLightbox()">
+    <img src="images/icon-next.svg" alt="" class="next right" onclick="nextPhoneImage()">
+    <div class="images-info">
+      <img src="images/image-product-1.jpg" alt="Thumbnail 1" class="thumbnail selected" onclick="changeImage('images/image-product-1.jpg,event')">
+      <img src="images/image-product-2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage('images/image-product-2.jpg',event)">
+      <img src="images/image-product-3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage('images/image-product-3.jpg',event)">
+      <img src="images/image-product-4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage('images/image-product-4.jpg',event)">
+   
+    </div>
+  </div>
+  <div class="producet-info">
+    <span class="span">Sneaker Company</span>
+    <h1>Fall Limited Edition Sneakers</h1>
+    <p>  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+<div class="price-cart">
+  <div class="price">
+    <span class="first">$125.00</span>
+    <span class="second">50%</span>
+
+  </div>
+  <span class="spn"> <s> $250.00</s></span>
+   </div>
+<div class="btns">
+  <div class="plus">
+    <img src="images/icon-plus.svg" onclick="increment()" alt="Plus">
+    <!-- <input id="score" type="number" value="0" readonly> -->
+    <span id="score">0</span>
+    <img src="images/icon-minus.svg" onclick="decrement()" alt="Minus">
+</div>
+
+  <button onclick="AddCart()"> <img src="images/icon-cart copy.svg" alt="" >Add to Cart</button>
+
+</div> 
+</div>
+</section>
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <div class="close">
+      <img src="images/icon-close.svg" alt="" class="remove" onclick="closeLightbox()">
+      </div>
+      <div class="product-images">
+        <img src="images/icon-next.svg" alt="" id="next" class="nextt lleft" onclick="prevImage()">
+        <img src="images/image-product-1.jpg" alt="product image" class="imgg" id="second-img">
+        <img src="images/icon-next.svg" alt="" id="prev" class="nextt rright" onclick="nextImage()">
+        <div class="images-info">
+          <img src="images/image-product-1.jpg" alt="Thumbnail 1" class="thumbnail selected" onclick="changeImagesecend('images/image-product-1.jpg', event)">
+          <img src="images/image-product-2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImagesecend('images/image-product-2.jpg', event)">
+          <img src="images/image-product-3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImagesecend('images/image-product-3.jpg', event)">
+          <img src="images/image-product-4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImagesecend('images/image-product-4.jpg', event)">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<aside id="aside" class="aside">
+  <img src="images/icon-close.svg" alt="" onclick="moveDivBack()">
+  <ul>   
+    <li><a href="#">Collections</a></li>
+    <li><a href="#">Men</a></li>
+    <li><a href="#">Women</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</aside>
+</body>
+<script src="main.js"></script>
+</html>
